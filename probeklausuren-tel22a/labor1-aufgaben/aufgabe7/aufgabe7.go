@@ -12,6 +12,14 @@ BEWERTUNG:
 // Hinweis: Gehen Sie davon aus, dass jedes Element pro Liste höchstens einmal vorkommt.
 func Intersect(l1, l2 []int) []int {
 	result := []int{}
-	// TODO
+
+	for _, v1 := range l1 {
+		for _, v2 := range l2 {
+			if v1 == v2 {
+				result = append(result, v1)
+			}
+		}
+	}
+
 	return result
 }
