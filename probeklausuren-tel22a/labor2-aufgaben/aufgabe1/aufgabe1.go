@@ -10,6 +10,13 @@ BEWERTUNG:
 // das längste Element, das mit der Buchstabenfolge "abc" beginnt.
 // Liefert den leeren String, falls es kein solches Element gibt.
 func LongestAbc(list []string) string {
-	// TODO
-	return ""
+	store := ""
+	for v, x := range list {
+		if len(x) >= 3 && x[:3] == "abc" {
+			if len(list[v]) > len(store) {
+				store = x
+			}
+		}
+	}
+	return store
 }
