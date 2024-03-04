@@ -19,6 +19,8 @@ type Connection struct {
 // IsBefore ist eine Methode von Connection und erwartet eine weitere Connection next.
 // Sie prüft, ob die gegebene Verbindung conn zeitlich vollständig vor next liegt.
 func (conn Connection) IsBefore(next Connection) bool {
-	// TODO
+	if (conn.ArrivalHour <= next.DepartureHour && conn.ArrivalMinute < next.DepartureMinute) || (conn.ArrivalHour < next.DepartureHour) {
+		return true
+	}
 	return false
 }

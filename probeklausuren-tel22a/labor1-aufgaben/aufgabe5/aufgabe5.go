@@ -10,6 +10,10 @@ BEWERTUNG:
 // die an Stelle n die Summe der Elemente aus l bis zu Stelle n enthält.
 func ArraySums(l []int) []int {
 	result := []int{}
-	// TODO
+	sum := 0
+	for _, v := range l {
+		sum = sum + v
+		result = append(result, sum)
+	}
 	return result
 }
