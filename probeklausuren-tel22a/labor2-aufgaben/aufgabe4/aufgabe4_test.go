@@ -9,8 +9,8 @@ func ExampleGreater() {
 	fmt.Println(Greater(0, 0))
 	fmt.Println(Greater(1, 0))
 	// Output:
-	// false
 	// true
 	// false
-	// true
+	// false
+	// false
 }

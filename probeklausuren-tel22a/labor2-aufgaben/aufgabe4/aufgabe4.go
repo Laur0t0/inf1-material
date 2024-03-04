@@ -13,6 +13,10 @@ BEWERTUNG:
 
 // Greater erwartet zwei int-Parameter x und y und liefert true, falls x < y.
 func Greater(x, y int) bool {
-	// TODO
-	return false
+	if x == 0 && y != 0 {
+		return true
+	} else if (x == 0 && !(y != 0)) || (!(x == 0) && !(y != 0)) {
+		return false
+	}
+	return Greater(x-1, y-1)
 }

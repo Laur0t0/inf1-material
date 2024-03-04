@@ -16,8 +16,14 @@ type Person struct {
 
 // CommonFriends erwartet zwei Personen und liefert eine Liste
 // mit allen Personen, die mit beiden befreundet sind.
-func CommonFriends(p1, p2 Person) []Person {
+func CommonFriends(per1, per2 Person) []Person {
 	result := []Person{}
-	// TODO
+	for i := 0; i < len(per1.Friends); i++ {
+		for n := 0; n < len(per2.Friends); n++ {
+			if per1.Friends[i].Name == per2.Friends[n].Name {
+				result = append(result, per1.Friends[i])
+			}
+		}
+	}
 	return result
 }

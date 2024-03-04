@@ -9,6 +9,12 @@ BEWERTUNG:
 
 // CountEven erwartet eine Liste von Zahlen und liefert die Anzahl der geraden Zahlen darin.
 func CountEven(list []int) int {
-	// TODO
-	return 0
+	if len(list) == 0 {
+		return 0
+	}
+	el, result := list[0], CountEven(list[1:])
+	if el%2 == 0 {
+		result++
+	}
+	return result
 }

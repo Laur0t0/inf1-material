@@ -11,9 +11,9 @@ BEWERTUNG:
 // Liefert den leeren String, falls es kein solches Element gibt.
 func LongestAbc(list []string) string {
 	store := ""
-	for v, x := range list {
+	for _, x := range list {
 		if len(x) >= 3 && x[:3] == "abc" {
-			if len(list[v]) > len(store) {
+			if len(x) > len(store) {
 				store = x
 			}
 		}
